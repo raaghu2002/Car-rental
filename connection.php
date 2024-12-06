@@ -1,15 +1,12 @@
 <?php 
     mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-    $con = mysqli_connect('localhost','root','','carproject');
-    if(!$con)
-    {
-        echo 'please check your Database connection';
+
+    // Use the correct MySQL host, username, password, and database name
+    $con = mysqli_connect('your-database-hostname.render.com', 'your-database-username', 'your-database-password', 'carproject');
+
+    if(!$con) {
+        echo 'Please check your database connection';
+    } else {
+        echo 'Connected to the database successfully!';
     }
-
-
-
-
-
-
-
 ?>
